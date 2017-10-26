@@ -1,0 +1,207 @@
+<resources>
+    <string name="app_name">CampusMap</string>
+    <string name="title_activity_maps">Map</string>
+
+
+    <string-array name="menu">
+        <item>News</item>
+        <item>Events</item>
+        <item>Hours</item>
+        <item>Navigate</item>
+    </string-array>
+
+    <string-array name="directory">
+        <item>Farnum</item>
+        <item>Grappone</item>
+        <item>Library</item>
+        <item>Little Hall</item>
+        <item>Sweeney</item>
+        <item>Macrury</item>
+        <item>Mcauliffe</item>
+        <item>North Hall</item>
+        <item>South Hall</item>
+        <item>Strout Hall</item>
+
+    </string-array>
+
+    <string-array name="sweeney">
+        <item>Gymnasium</item>
+        <item>Multi-purpose Room</item>
+        <item>Health &amp; Counseling Center</item>
+        <item>Director of Health Services</item>
+        <item>Director of Student Development &amp; Counseling Services</item>
+        <item>Counselor</item>
+        <item>AmeriCorps Vista</item>
+        <item>Conference room</item>
+        <item>Marketplace</item>
+        <item>ATM</item>
+        <item>Vending, Rotunda, Games Area, Restrooms, Auditorium</item>
+    </string-array>
+
+    <string-array name="sweeney_floors">
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+    </string-array>
+
+
+    <string-array name="macrury">
+        <item>Biology Lab</item>
+        <item>X-Ray Lab</item>
+        <item>Computer Lab</item>
+        <item>Dental Hygine Clinic</item>
+        <item>Student Lounge</item>
+        <item>Faculty Lounge</item>
+    </string-array>
+
+    <string-array name="macrury_floors">
+        <item>2</item>
+        <item>1N</item>
+        <item>1S</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="farnum">
+        <item>Computer Labs</item>
+        <item>Networking Center</item>
+        <item>IT Department Head Office</item>
+    </string-array>
+
+    <string-array name="farnum_floor">
+        <item>1</item>
+    </string-array>
+
+    <string-array name="library">
+        <item>Computer Labs</item>
+        <item>Study Labs</item>
+        <item>Student Center</item>
+        <item>Printers / Copiers</item>
+        <item>Math Lab</item>
+    </string-array>
+
+    <string-array name="library_floors">
+        <item>1</item>
+    </string-array>
+
+    <string-array name="littleHall">
+        <item>Lecture Hall</item>
+        <item>Conference Room</item>
+        <item>Computer Lab</item>
+        <item>Physics Lab</item>
+        <item>Architecture Drafting Lab</item>
+        <item>Engineering Lab</item>
+    </string-array>
+
+    <string-array name="littlehall_floors">
+        <item>2</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="mcauliffe">
+        <item>Astronomy Room</item>
+    </string-array>
+
+
+    <string name="mcauliffe">Mcauliffe</string>
+    <string name="sweeney">Sweeney</string>
+    <string name="littleHall">Little Hall</string>
+    <string name="farnum">Farnum</string>
+    <string name="library">Library</string>
+    <string name="parking">Parking</string>
+    <string name="macrury">Macrury</string>
+    <string name="directory">Directory</string>
+    <string name="events">Events</string>
+    <string name="classes">Classes</string>
+    <string name="navigate">Navigate</string>
+    <string name="settings">Settings</string>
+    <string name="exit">Exit</string>
+    <string name="grappone">Grappone</string>
+    <string name="place_open">open</string>
+    <string name="place_close">close</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Building description Strings -->
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="list_settings">
+        <item>Map Style</item>
+        <item>Dracula</item>
+        <item>Notifications</item>
+
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="parking_menu">Parking</string>
+    <string name="alerts">Alerts</string>
+
+
+</resources>
