@@ -8,14 +8,12 @@ import android.location.Location;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomSheetBehavior;
-import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AlertDialog;
@@ -40,8 +38,10 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polygon;
 import com.google.android.gms.maps.model.PolygonOptions;
 import com.jebi.jvhor_000.campusmap.Adapter.DirectoryAdapter;
+import com.jebi.jvhor_000.campusmap.Adapter.EventsAdapter;
 import com.jebi.jvhor_000.campusmap.Adapter.FarnumAdapter;
 import com.jebi.jvhor_000.campusmap.Adapter.GrapponeAdapter;
+import com.jebi.jvhor_000.campusmap.Adapter.LibraryAdapter;
 import com.jebi.jvhor_000.campusmap.Adapter.LittleHallAdapter;
 import com.jebi.jvhor_000.campusmap.Adapter.MacruryAdapter;
 import com.jebi.jvhor_000.campusmap.Adapter.McauliffeAdapter;
@@ -233,16 +233,16 @@ public class MapsActivity extends FragmentActivity implements MainPage.listListe
                 new LatLng(43.224315, -71.530928), new LatLng(43.224416, -71.531188)));
         final Polygon grapponeP = campusMap.addPolygon((new PolygonOptions()).clickable(true).add(new LatLng(43.222558, -71.532637), new LatLng(43.222958, -71.532740), new LatLng(43.223106, -71.533044),
                 new LatLng(43.222950, -71.533173), new LatLng(43.222869, -71.533009), new LatLng(43.222510, -71.532915)));
-        final Polygon policeP = campusMap.addPolygon((new PolygonOptions()).clickable(true).add(new LatLng(43.225978, -71.533206), new LatLng(43.225888, -71.533236), new LatLng(43.225788, -71.532601),
+        final Polygon policeP = campusMap.addPolygon((new PolygonOptions()).clickable(false).add(new LatLng(43.225978, -71.533206), new LatLng(43.225888, -71.533236), new LatLng(43.225788, -71.532601),
                 new LatLng(43.225849, -71.532583), new LatLng(43.225795, -71.532230), new LatLng(43.226000, -71.532166), new LatLng(43.225962, -71.531920), new LatLng(43.225894, -71.531940), new LatLng(43.225846, -71.531653), new LatLng(43.225581, -71.531731), new LatLng(43.225652, -71.532185), new LatLng(43.225577, -71.532208), new LatLng(43.225681, -71.532851),
                 new LatLng(43.225721, -71.532839), new LatLng(43.225790, -71.533264), new LatLng(43.225710, -71.533289), new LatLng(43.225812, -71.533917), new LatLng(43.226083, -71.533834), new LatLng(43.225981, -71.533206)));
         final Polygon officeP = campusMap.addPolygon((new PolygonOptions()).add(new LatLng(43.2237179, -71.5308395), new LatLng(43.2233620, -71.5307305), new LatLng(43.2233339, -71.5309327), new LatLng(43.2236876, -71.5310379)));
-        final Polygon campusSecurityP = campusMap.addPolygon((new PolygonOptions().add(new LatLng(43.222940, -71.530245), new LatLng(43.222799, -71.530212), new LatLng(43.222788, -71.530281), new LatLng(43.222727, -71.530270), new LatLng(43.222697, -71.530482), new LatLng(43.222902, -71.530534)).clickable(true)));
-        final Polygon cafeteriaP = campusMap.addPolygon((new PolygonOptions().clickable(true).add(new LatLng(43.2227062, -71.5315197), new LatLng(43.2228049, -71.5311177), new LatLng(43.2227714, -71.5311006), new LatLng(43.2227903, -71.5309712), new LatLng(43.2226918, -71.5309427), new LatLng(43.2226803, -71.5309913), new LatLng(43.2226332, -71.5309783),
+        final Polygon campusSecurityP = campusMap.addPolygon((new PolygonOptions().add(new LatLng(43.222940, -71.530245), new LatLng(43.222799, -71.530212), new LatLng(43.222788, -71.530281), new LatLng(43.222727, -71.530270), new LatLng(43.222697, -71.530482), new LatLng(43.222902, -71.530534)).clickable(false)));
+        final Polygon cafeteriaP = campusMap.addPolygon((new PolygonOptions().clickable(false).add(new LatLng(43.2227062, -71.5315197), new LatLng(43.2228049, -71.5311177), new LatLng(43.2227714, -71.5311006), new LatLng(43.2227903, -71.5309712), new LatLng(43.2226918, -71.5309427), new LatLng(43.2226803, -71.5309913), new LatLng(43.2226332, -71.5309783),
                 new LatLng(43.2226366, -71.5309347), new LatLng(43.2225809, -71.5309186), new LatLng(43.2225501, -71.5311261), new LatLng(43.2225227, -71.5311224), new LatLng(43.2224902, -71.5313146), new LatLng(43.2224788, -71.5313581))));
-        final Polygon northHallP =campusMap.addPolygon((new PolygonOptions().clickable(true).add(new LatLng(43.225774, -71.531229), new LatLng(43.225872, -71.531317), new LatLng(43.226096, -71.530841), new LatLng(43.226424, -71.531124), new LatLng(43.226484, -71.531000), new LatLng(43.226197, -71.530746),  new LatLng(43.226521, -71.530050),  new LatLng(43.226415, -71.529960), new LatLng(43.226122, -71.530594),
+        final Polygon northHallP =campusMap.addPolygon((new PolygonOptions().clickable(false).add(new LatLng(43.225774, -71.531229), new LatLng(43.225872, -71.531317), new LatLng(43.226096, -71.530841), new LatLng(43.226424, -71.531124), new LatLng(43.226484, -71.531000), new LatLng(43.226197, -71.530746),  new LatLng(43.226521, -71.530050),  new LatLng(43.226415, -71.529960), new LatLng(43.226122, -71.530594),
                 new LatLng(43.226083, -71.530563))));
-        final Polygon southHallP = campusMap.addPolygon((new PolygonOptions().add(new LatLng(43.221033, -71.532699), new LatLng(43.221032, -71.532549), new LatLng(43.220502, -71.532554), new LatLng(43.220505, -71.532704))));
+        final Polygon southHallP = campusMap.addPolygon((new PolygonOptions().clickable(false).add(new LatLng(43.221033, -71.532699), new LatLng(43.221032, -71.532549), new LatLng(43.220502, -71.532554), new LatLng(43.220505, -71.532704))));
 
 
         //Tagging with marker
@@ -295,7 +295,7 @@ public class MapsActivity extends FragmentActivity implements MainPage.listListe
         bottomMenu.setHideable(false);
 
 
-        viewPager.setAdapter(new ViewAdapter(getSupportFragmentManager(), 1));
+        viewPager.setAdapter(new EventsAdapter(getSupportFragmentManager(), 1));
         //viewPager.setCurrentItem(8);
         //viewPager.beginFakeDrag();
 
@@ -381,7 +381,7 @@ public class MapsActivity extends FragmentActivity implements MainPage.listListe
                 }
                 break;
             default:
-                viewPager.setAdapter(new ViewAdapter(getSupportFragmentManager(), 1));
+                viewPager.setAdapter(new EventsAdapter(getSupportFragmentManager(), 1));
                 //viewPager.setCurrentItem(8);
                 break;
 
@@ -445,6 +445,7 @@ public class MapsActivity extends FragmentActivity implements MainPage.listListe
                  break;
             case "Events":
                 setAdapter(menu);
+                bottomMenu.setState(BottomSheetBehavior.STATE_EXPANDED);
                 break;
             case "Settings":
                 if(campusMap.getMapType() == GoogleMap.MAP_TYPE_NORMAL){
